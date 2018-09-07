@@ -59,7 +59,18 @@ Let us first try training on 2 nodes. Start by allocating the nodes:
 ```bash
 salloc --nodes 2 --time 01:00:00 -C knl --reservation scaleday
 ```
-  
+In order to use regular nersc account instead of the training account, the 
+command should be changed to,
+
+```bash
+salloc --nodes 2 --time 01:00:00 -C knl -q interactive
+```
+
+or 
+```bash
+sbatch *.sh --nodes 2 --time 01:00:00 -C knl -q regular
+```
+
 Load TensorFlow module:  
 ```bash
 module load tensorflow/intel-1.9.0-py36
