@@ -66,9 +66,11 @@ command should be changed to,
 salloc --nodes 2 --time 01:00:00 -C knl -q interactive
 ```
 
-or 
+or use the nersc job script generator to create batch jobs,
+
+https://my.nersc.gov/script_generator.php
 ```bash
-sbatch *.sh --nodes 2 --time 01:00:00 -C knl -q regular
+sbatch myjob.sh 
 ```
 
 Load TensorFlow module:  
